@@ -1,0 +1,63 @@
+:root {
+  --header-height: 60px;
+}
+
+header.siteHeader {
+  position: sticky;
+  top: 0;
+  padding-left: var(--site-edge-margin);
+  padding-right: var(--site-edge-margin);
+  background-color: aquamarine;
+  text-align: center;
+  z-index: 100;
+
+  .headerContainer {
+    display: flex;
+    position: relative;
+    height: var(--header-height);
+    align-items: stretch;
+  }
+}
+
+nav.navbarMenu {
+  display: flex;
+  background-color: inherit;
+  align-items: center;
+  flex-grow: 1;
+
+  .navList {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: inherit;
+
+    .navItem {
+      cursor: pointer;
+
+      .navLink {
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--main-text);
+        text-decoration: none;
+      }
+      .navIcon {
+        width: 24px;
+        height: 24px;
+      }
+      .navLink,
+      .navIcon {
+        &:hover,
+        &:active {
+          color: var(--secondary-text);
+          --main-text: var(--secondary-text);
+        }
+      }
+    }
+  }
+}
+
+.colorBlock {
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+}
